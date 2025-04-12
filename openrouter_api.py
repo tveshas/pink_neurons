@@ -94,11 +94,11 @@ class SimpleArrayVisualization(Scene):
         """
         
         payload = {
-            "model": "openrouter/optimus-alpha",
+            "model": "google/gemini-2.5-pro-exp-03-25:free",
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are an AI specialized in creating Manim animations for data structures and algorithms visualization. Output only clean, runnable Python code without any markdown formatting, explanation, or code blocks."
+                    "content": "You are an AI specialized in creating Manim animations for data structures and algorithms visualization. Output only clean, runnable Python code without any markdown formatting, explanation, or code blocks. explain everything thoroughly"
                 },
                 {
                     "role": "user", 
