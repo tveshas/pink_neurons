@@ -61,7 +61,7 @@ Replace "quick sort" with any DSA topic you want to visualize.
 - `styles.css`: Styling for the website
 - `script.js`: JavaScript for interactivity
 - `server.py`: Simple Python server with API endpoints
-- `openrouter_api.py`: Client for generating Manim code with Optimus Alpha
+- `openrouter_api.py`: Client for generating Manim code with Google: Gemini 2.5 Pro Experimental
 - `manim_renderer.py`: Tools for rendering Manim animations
 - `test_render.py`: Test script for generating and rendering animations
 - `img/team_logo.png`: Pink Neurons logo
