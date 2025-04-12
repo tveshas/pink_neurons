@@ -1,16 +1,20 @@
 # Pink Neurons - DSA Learning Platform
-
-A beautiful and interactive platform for learning Data Structures and Algorithms through embedded YouTube videos and AI-generated visualizations.
+A beautiful and interactive platform for learning CS concepts through embedded YouTube videos and AI-generated Manim visualisations.
+## What is Manim?
+Manim (Mathematical Animation Engine) is an open-source Python library created by Grant Sanderson, the brilliant mind behind the popular YouTube channel 3Blue1Brown. Originally developed to create the stunning mathematical animations seen in his educational videos, Manim allows developers and educators to programmatically generate precise, visually engaging animations that explain complex concepts with remarkable clarity. The library has since evolved into a community-driven project (manim.community), enabling educators and students worldwide to create professional-grade educational visualizations.
 
 ## Features
+Clean and modern UI with Pink Neurons branding
+Side-by-side layout with search section and topic buttons
+Embedded YouTube video playback directly on the site
+Search functionality to find specific topics
+Responsive design for mobile and desktop
+AI-powered Manim visualizations for custom DSA topics not in the popular list
+Optimus Alpha model integration for generating high-quality code visualizations
 
-- Clean and modern UI with Pink Neurons branding
-- Side-by-side layout with search section and topic buttons
-- Embedded YouTube video playback directly on the site
-- Search functionality to find specific topics
-- Responsive design for mobile and desktop
-- **NEW**: AI-powered Manim visualizations for custom DSA topics not in the popular list
-- **NEW**: Optimus Alpha model integration for generating high-quality code visualizations
+## How It Works
+Our platform leverages the power of Manim to transform abstract data structures and algorithms into intuitive visual representations. By combining pre-existing educational content with AI-generated visualizations, we create a comprehensive learning experience that caters to visual learners and helps demystify complex computer science concepts.
+
 
 ## How to Run
 
