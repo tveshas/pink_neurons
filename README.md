@@ -1,5 +1,6 @@
-# Pink Neurons - DSA Learning Platform
-A beautiful and interactive platform for learning CS+Math concepts through embedded YouTube videos and AI-generated Manim visualisations.
+# Pink Neurons - Visual Learning Platform
+
+A beautiful and interactive platform letting you enter the realm of learning CS + Math concepts through the very famous Manim visualisations.
 
 ## What is Manim?
 [Manim](https://www.manim.community/) (Mathematical Animation Engine) is an open-source Python library created by Grant Sanderson, the brilliant mind behind the popular YouTube channel 3Blue1Brown. Originally developed to create the stunning mathematical animations seen in his educational videos, Manim allows developers and educators to programmatically generate precise, visually engaging animations that explain complex concepts with remarkable clarity. 
