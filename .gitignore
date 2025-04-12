@@ -1,0 +1,11 @@
+# Manim output directory
+media/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Other potential ignores (optional)
+.DS_Store
+*.log
+processing_*.flag 
