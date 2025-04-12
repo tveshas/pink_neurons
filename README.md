@@ -8,7 +8,7 @@ A beautiful and interactive platform letting you enter the realm of learning CS 
 ## How It Works
 ![image](https://github.com/user-attachments/assets/4191d0b9-d7c3-4a7b-8ce7-325449f1f9b4)
 
-## Output We Generated (: :
+## Output We Generated (: 
 
 ![videoplayback](https://github.com/user-attachments/assets/4a909c03-d6d7-4853-95ac-0b11adad76f0)
 
