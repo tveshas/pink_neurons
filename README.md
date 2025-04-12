@@ -71,7 +71,7 @@ Replace "quick sort" with any DSA topic you want to visualize.
 - Frontend: HTML5, CSS3, JavaScript
 - Backend: Python
 - Animation: Manim (Mathematical Animation Engine)
-- AI Code Generation: OpenRouter.ai's Optimus Alpha model
+- AI Code Generation: OpenRouter.ai's Google: Gemini 2.5 Pro Experimental
 
 ## Note
 
