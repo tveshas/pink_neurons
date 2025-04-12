@@ -16,7 +16,7 @@ class OpenRouterClient:
         }
     
     def generate_manim_code(self, query: str) -> Dict[str, Any]:
-        """Generate Manim code for a given DSA concept query using Optimus Alpha."""
+        """Generate Manim code for a given DSA concept query using Gemini."""
         
         # Load the simple array visualization template as an example
         template = """
