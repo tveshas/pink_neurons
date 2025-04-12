@@ -19,7 +19,7 @@ import requests
 # Configure server
 PORT = 8000
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "your api key"
 
 # Initialize the OpenRouter client and Manim renderer
 openrouter_client = OpenRouterClient(OPENROUTER_API_KEY)
