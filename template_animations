@@ -1,0 +1,207 @@
+# Simple Array/List Visualization Template
+from manim import *
+
+class SimpleArrayVisualization(Scene):
+    def construct(self):
+        # Title
+        title = Text("Array Visualization", font_size=40).to_edge(UP)
+        self.play(Write(title))
+        self.wait(1)
+        
+        # Create array of values
+        values = [5, 10, 15, 20, 25]
+        
+        # Create squares to represent each element
+        squares = []
+        labels = []
+        
+        for i, val in enumerate(values):
+            square = Square(side_length=1, color=BLUE)
+            square.shift(RIGHT * (i * 1.2) - RIGHT * 2)
+            squares.append(square)
+            
+            label = Text(str(val), font_size=30).move_to(square.get_center())
+            labels.append(label)
+        
+        # Animate creation
+        self.play(*[Create(square) for square in squares])
+        self.play(*[Write(label) for label in labels])
+        self.wait(1)
+        
+        # Demonstrate operations on the array
+        # Highlight a specific element
+        self.play(
+            squares[2].animate.set_color(YELLOW),
+            labels[2].animate.set_color(RED),
+            run_time=0.5
+        )
+        self.wait(1)
+        
+        # Reset colors
+        self.play(
+            squares[2].animate.set_color(BLUE),
+            labels[2].animate.set_color(WHITE),
+        )
+        self.wait(1)
+        
+        # Conclusion
+        conclusion_text = Text("Basic Array Operations", font_size=32)
+        conclusion_text.next_to(title, DOWN, buff=0.5)
+        self.play(Write(conclusion_text))
+        self.wait(2)
+
+# Simple Sorting Animation Template
+from manim import *
+
+class SimpleSortingVisualization(Scene):
+    def construct(self):
+        # Title
+        title = Text("Sorting Algorithm", font_size=40).to_edge(UP)
+        self.play(Write(title))
+        self.wait(1)
+        
+        # Create array to sort
+        values = [7, 2, 6, 3, 8, 4, 5]
+        
+        # Create rectangles to represent the values
+        rectangles = []
+        labels = []
+        
+        for i, val in enumerate(values):
+            # Create rectangle with height based on value
+            rect = Rectangle(height=val*0.2, width=0.8, color=BLUE)
+            rect.next_to(LEFT * 3 + RIGHT * i * 1, UP, buff=0)
+            rect.align_to(DOWN * 2, DOWN)
+            rectangles.append(rect)
+            
+            # Add value label
+            label = Text(str(val), font_size=24).next_to(rect, DOWN, buff=0.2)
+            labels.append(label)
+        
+        # Draw initial array
+        self.play(*[Create(rect) for rect in rectangles])
+        self.play(*[Write(label) for label in labels])
+        self.wait(1)
+        
+        # Sorting steps (for example, bubble sort)
+        explanation = Text("Sorting step by step", font_size=32)
+        explanation.next_to(title, DOWN, buff=0.5)
+        self.play(Write(explanation))
+        self.wait(1)
+        
+        # Simulate swapping two elements
+        self.play(
+            rectangles[0].animate.set_color(YELLOW),
+            rectangles[1].animate.set_color(YELLOW),
+            run_time=0.5
+        )
+        self.wait(0.5)
+        
+        # Swap positions
+        self.play(
+            rectangles[0].animate.next_to(LEFT * 3 + RIGHT * 1 * 1, UP, buff=0).align_to(DOWN * 2, DOWN),
+            labels[0].animate.next_to(LEFT * 3 + RIGHT * 1 * 1, DOWN, buff=5.5),
+            rectangles[1].animate.next_to(LEFT * 3 + RIGHT * 0 * 1, UP, buff=0).align_to(DOWN * 2, DOWN),
+            labels[1].animate.next_to(LEFT * 3 + RIGHT * 0 * 1, DOWN, buff=5.5),
+            run_time=1
+        )
+        self.wait(0.5)
+        
+        # Reset colors
+        self.play(
+            rectangles[0].animate.set_color(BLUE),
+            rectangles[1].animate.set_color(BLUE),
+            run_time=0.5
+        )
+        self.wait(1)
+        
+        # Conclusion
+        conclusion_text = Text("Sorting Complete", font_size=32)
+        conclusion_text.next_to(explanation, DOWN, buff=0.5)
+        self.play(ReplacementTransform(explanation, conclusion_text))
+        self.wait(2)
+
+# Simple Graph Visualization Template
+from manim import *
+
+class SimpleGraphVisualization(Scene):
+    def construct(self):
+        # Title
+        title = Text("Graph Data Structure", font_size=40).to_edge(UP)
+        self.play(Write(title))
+        self.wait(1)
+        
+        # Define graph vertices positions
+        positions = {
+            "A": LEFT * 2 + UP * 1,
+            "B": UP * 2,
+            "C": RIGHT * 2 + UP * 1,
+            "D": LEFT * 1 + DOWN * 1.5,
+            "E": RIGHT * 1 + DOWN * 1.5,
+        }
+        
+        # Create vertices (circles)
+        vertices = {}
+        labels = {}
+        
+        for key, pos in positions.items():
+            circle = Circle(radius=0.4, color=BLUE).move_to(pos)
+            label = Text(key, font_size=28).move_to(pos)
+            vertices[key] = circle
+            labels[key] = label
+        
+        # Define edges between vertices
+        edges = [
+            ("A", "B"),
+            ("A", "D"),
+            ("B", "C"),
+            ("B", "E"),
+            ("C", "E"),
+            ("D", "E")
+        ]
+        
+        # Create edge lines
+        edge_lines = []
+        for start, end in edges:
+            line = Line(positions[start], positions[end], color=GRAY)
+            edge_lines.append(line)
+        
+        # Draw graph
+        self.play(*[Create(line) for line in edge_lines])
+        self.play(*[Create(circle) for circle in vertices.values()])
+        self.play(*[Write(label) for label in labels.values()])
+        self.wait(1)
+        
+        # Demonstrate operations on the graph
+        explanation = Text("Graph Traversal", font_size=32)
+        explanation.next_to(title, DOWN, buff=0.5)
+        self.play(Write(explanation))
+        self.wait(1)
+        
+        # Highlight a path in the graph
+        self.play(vertices["A"].animate.set_color(YELLOW), run_time=0.5)
+        self.wait(0.5)
+        
+        # Highlight an edge
+        edge_index = edges.index(("A", "B"))
+        self.play(edge_lines[edge_index].animate.set_color(GREEN), run_time=0.5)
+        self.wait(0.5)
+        
+        # Highlight next vertex
+        self.play(vertices["B"].animate.set_color(YELLOW), run_time=0.5)
+        self.wait(0.5)
+        
+        # Highlight another edge
+        edge_index = edges.index(("B", "C"))
+        self.play(edge_lines[edge_index].animate.set_color(GREEN), run_time=0.5)
+        self.wait(0.5)
+        
+        # Highlight last vertex
+        self.play(vertices["C"].animate.set_color(YELLOW), run_time=0.5)
+        self.wait(1)
+        
+        # Conclusion
+        conclusion_text = Text("Graph Operations Complete", font_size=32)
+        conclusion_text.next_to(explanation, DOWN, buff=0.5)
+        self.play(ReplacementTransform(explanation, conclusion_text))
+        self.wait(2) 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Neurons - DSA Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Decorative elements -->
+    <div class="doodle doodle-1">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 10C32.4 10 10 32.4 10 60C10 87.6 32.4 110 60 110C87.6 110 110 87.6 110 60C110 32.4 87.6 10 60 10Z" stroke="#c084fc" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 12"/>
+        </svg>
+    </div>
+    <div class="doodle doodle-2">
+        <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,70 Q70,20 110,70 T30,70" stroke="#c084fc" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="img/team_logo.png" alt="Pink Neurons Logo" class="logo">
+            </div>
+        </header>
+        
+        <section class="main-content">
+            <h1>Welcome to Pink Neurons</h1>
+            <p>Your fun and interactive Data Structures & Algorithms learning platform with high-quality video tutorials to build your skills.</p>
+            
+            <div class="content-layout">
+                <div class="search-section">
+                    <h2>What do you want to learn?</h2>
+                    <p class="section-desc">Enter any data structure or algorithm topic you're interested in learning about.</p>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Enter a topic (e.g., Binary Search, Recursion, etc.)">
+                        <button id="search-button">Search</button>
+                    </div>
+                </div>
+                
+                <div class="topics-section">
+                    <h2>Popular Topics</h2>
+                    <p class="section-desc">Click any topic to watch a video tutorial directly on this page.</p>
+                    <div class="topic-buttons">
+                        <button class="topic-btn" data-video-id="qB7ZvdHmMqk">Depth-First Search (DFS)</button>
+                        <button class="topic-btn" data-video-id="zf1lSkE2kEQ">Linked List</button>
+                        <button class="topic-btn" data-video-id="MVrRhVskzks">First Come First Serve (FCFS)</button>
+                        <button class="topic-btn" data-video-id="cH-E9RxyxzI">Prim's Algorithm</button>
+                        <button class="topic-btn" data-video-id="Vl1VE-YxMhc">Stack</button>
+                        <button class="topic-btn" data-video-id="SRWNWzwKVyw">Queue</button>
+                        <button class="topic-btn" data-video-id="9BPJXlgTR9E">Bubble Sort</button>
+                        <button class="topic-btn" data-video-id="f5bgM0fg7aY">Arrays</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat interface section -->
+            <div class="chat-section">
+                <h2>Chat with Pink Neurons AI</h2>
+                <p class="section-desc">Ask questions about any DSA topic and get video explanations and text responses.</p>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message system">
+                            Hello! I'm Pink Neurons AI. Ask me about any data structure or algorithm topic.
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chat-input" placeholder="Type your question here...">
+                        <button id="send-button">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p class="footer-text">© 2024 Pink Neurons • All rights reserved</p>
+        </footer>
+    </div>
+    
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="video-container">
+                <iframe id="youtube-frame" frameborder="0" allowfullscreen></iframe>
+                <video id="local-video" controls autoplay style="display: none; width: 100%; height: 100%;"></video>
+            </div>
+            <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p id="loading-text">Generating visualization...</p>
+            </div>
+            <div class="chat-response" id="chat-response" style="display: none;">
+                <h3>AI Explanation</h3>
+                <div id="explanation-text"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,11 @@
+Logo Instructions:
+
+1. Save the Pink Neurons logo from the shared screenshot.
+2. The image shows a pink cartoon character with the text "PINK" above and "NEURONS" below.
+3. Save this image as "logo.png" in the root directory of the project.
+4. The logo will be automatically loaded by the website when you run the server.
+
+If the image is not already saved from the screenshot:
+1. Right-click on the image in your conversation with the AI
+2. Select "Save Image As..."
+3. Name it "logo.png" and save it in the root directory of this project 
