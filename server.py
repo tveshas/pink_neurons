@@ -337,7 +337,7 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             Available topic videos: Depth-First Search (DFS), Linked List, First Come First Serve (FCFS), Prim's Algorithm, Stack, Queue, Bubble Sort, Arrays."""
             
             payload = {
-                "model": "openrouter/optimus-alpha",  # Using Claude for better formatting control
+                "model": "google/gemini-2.5-pro-exp-03-25:free",  
                 "messages": [
                     {
                         "role": "system", 
