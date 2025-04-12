@@ -12,6 +12,8 @@ A beautiful and interactive platform letting you enter the realm of learning CS 
 
 ![videoplayback](https://github.com/user-attachments/assets/4a909c03-d6d7-4853-95ac-0b11adad76f0)
 
+`media/videos` file has some videos we generated, check it out!
+
 ## API Keys (before running): 
 
 Make sure you have access to Gemini 2.5 Pro Experimental API Key and enter it in the `server.py` and `openrouter_api.py`
