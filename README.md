@@ -45,19 +45,7 @@ http://localhost:8000
 
 - Click on any topic button on the right side to watch the embedded video
 - Use the search box on the left to find specific topics
-- Enter custom learning topics in the search field
-- Close videos by clicking the X, clicking outside the video, or pressing ESC
-- **NEW**: Search for topics not in the popular list to generate a custom Manim visualization
-
-## Testing Custom Visualizations
-
-You can test the visualization generation separately using the test script:
-
-```bash
-python test_render.py "quick sort"
-```
-
-Replace "quick sort" with any DSA topic you want to visualize.
+- Enter custom learning topics in the search field and it will generate a custom Manim visualization
 
 ## Structure
 
