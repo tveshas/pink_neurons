@@ -14,7 +14,7 @@ def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="Generate and render a Manim animation")
     parser.add_argument("query", help="The DSA concept to visualize")
-    parser.add_argument("--api-key", default="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", 
+    parser.add_argument("--api-key", default="", 
                         help="OpenRouter API key")
     parser.add_argument("--output-dir", default="media", help="Output directory for rendered animations")
     args = parser.parse_args()
