@@ -10,7 +10,7 @@ from manim_renderer import ManimRenderer
 
 def main():
     # Configuration
-    api_key = "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"
+    api_key = ""
     query = "binary tree"
     
     # Initialize components
